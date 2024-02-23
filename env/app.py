@@ -1,10 +1,9 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel,ValidationError 
+from pydantic import BaseModel, ValidationError
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
 from fastapi.middleware.cors import CORSMiddleware
-
 
 app = FastAPI()
 
@@ -32,6 +31,10 @@ class ProductInfo(BaseModel):
     title: str
     price: float
     imgUrl: str
+
+@app.get("/")
+async def read_root():
+    return {"message": "Welcome to the BeautyPlex API!"}
 
 @app.post("/submit-form/")
 async def submit_form(user_info: UserInfo, product_info: ProductInfo):
