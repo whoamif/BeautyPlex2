@@ -11,7 +11,7 @@ app = FastAPI()
 # CORS settings
 origins = [
     "https://beautyplex0-qs8tenldq-beautyplexs-projects.vercel.app", 
-    "https://beautyplex0.vercel.app",  
+    "https://beautyplex0.vercel.app/",  
 ]
 app.add_middleware(
     CORSMiddleware,
