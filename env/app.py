@@ -10,8 +10,8 @@ app = FastAPI()
 
 # CORS settings
 origins = [
-    "http://localhost",
-    "http://localhost:3000",  
+    "https://beautyplex0-qs8tenldq-beautyplexs-projects.vercel.app", 
+    "https://beautyplex0.vercel.app/", 
 ]
 app.add_middleware(
     CORSMiddleware,
