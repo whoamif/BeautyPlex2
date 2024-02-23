@@ -7,18 +7,6 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# CORS settings
-origins = [
-    "https://beautyplex0-qs8tenldq-beautyplexs-projects.vercel.app", 
-    "https://beautyplex0.vercel.app",  
-]
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "DELETE"],
-    allow_headers=["*"],
-)
 
 class UserInfo(BaseModel):
     name: str
