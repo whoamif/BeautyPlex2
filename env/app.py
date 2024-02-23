@@ -4,8 +4,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
 from fastapi.middleware.cors import CORSMiddleware
-from google.oauth2 import service_account
-from google.auth.transport.requests import Request
+
 
 app = FastAPI()
 
